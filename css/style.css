@@ -4,7 +4,7 @@ html, body, p, ul {
 
 body {
   font: 100% Helvetica, sans-serif;
-  color: #EDFF44; }
+  color: #d3a91f; }
 
 header {
   padding: 40px 0 20px; }
@@ -16,28 +16,39 @@ ul {
     display: inline; }
     ul li a {
       text-decoration: none;
-      color: #141212;
-      background: #EDFF44;
+      color: #d3a91f;
+      background: #141212;
       padding: 5px 10px; }
+      ul li a:before {
+        content: "~"; }
       ul li a:hover {
         transition: background-color 2s ease;
         background-color: #9100FF; }
 
 article {
-  background: #a2a2a2;
+  background: #797979;
   color: #141212;
   padding: 10px; }
+  article:nth-child(4n+2), article:nth-child(4n+3) {
+    grid-column: span 3;
+    color: #d3a91f; }
 
 main {
   width: 90%;
   margin: 0 auto;
-  background: #2f2a2a;
+  background: #d3a91f;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px; }
 
-article:nth-child(3) blockquote {
-  background-color: green; }
+article:first-child, article:last-child {
+  background: white; }
+
+article:nth-child(3) blockquote::before {
+  content: open-quote; }
+
+article:nth-child(3) blockquote::after {
+  content: close-quote; }
 
 article:first-letter {
   font-size: 150%; }

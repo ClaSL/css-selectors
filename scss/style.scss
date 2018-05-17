@@ -1,5 +1,5 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #EDFF44;
+$primary-color: #d3a91f;
 $secondary-color: #141212;
 $tertiary-color: #9100FF;
 
@@ -26,9 +26,13 @@ html, body, p , ul{
         display: inline;
         a {
             text-decoration: none;
-            color: $secondary-color;
-            background: $primary-color;
+            color: $primary-color;
+            background: $secondary-color;
             padding: $space/4 $space/2;
+            &:before{ 
+                content:"~";
+            }
+
         &:hover{
             transition: background-color 2s ease;
             background-color:$tertiary-color ;
@@ -42,20 +46,40 @@ article {
     background: grayscale($primary-color);
     color: $secondary-color;
     padding: $space/2;
+
+    &:nth-child(4n+2), &:nth-child(4n+3){
+        grid-column: span 3;
+        color:$primary-color;
+        
+    }
 }
 main {
     width: $width*.9;
     margin: 0 auto;
-    background: lighten($secondary-color, 10%);
+    background: $primary-color;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: $space/2;
 
   }
 
-  article:nth-child(3) blockquote{
-      background-color: green;
+  article:first-child , article:last-child {
+      background: white;
   }
+
+
+
+  article:nth-child(3) blockquote::before{
+      content:open-quote; 
+  }
+
+  article:nth-child(3) blockquote::after{
+    content:close-quote; 
+}
+
+
+
+
 
   article:first-letter {
     font-size: 150%;
