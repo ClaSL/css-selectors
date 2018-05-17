@@ -1,0 +1,37 @@
+html, body, p, ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #d3a91f; }
+
+header {
+  padding: 40px 0 20px; }
+
+ul {
+  list-style: none; }
+  ul li {
+    margin: 0;
+    display: inline; }
+    ul li a {
+      text-decoration: none;
+      color: #141212;
+      background: #d3a91f;
+      padding: 5px 10px; }
+      ul li a:hover {
+        transition: background-color 2s ease;
+        background-color: red; }
+
+article {
+  background: #797979;
+  color: #141212;
+  padding: 10px; }
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background: #2f2a2a;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; }
