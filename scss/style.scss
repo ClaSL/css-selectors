@@ -1,6 +1,8 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #d3a91f;
+$primary-color: #EDFF44;
 $secondary-color: #141212;
+$tertiary-color: #9100FF;
+
 $width: 100%;
 $space: 20px;
 
@@ -29,11 +31,12 @@ html, body, p , ul{
             padding: $space/4 $space/2;
         &:hover{
             transition: background-color 2s ease;
-            background-color: red;
+            background-color:$tertiary-color ;
         }
         }
     }
 }
+
 
 article {
     background: grayscale($primary-color);
@@ -48,4 +51,12 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: $space/2;
 
+  }
+
+  article:nth-child(3) blockquote{
+      background-color: green;
+  }
+
+  article:first-letter {
+    font-size: 150%;
   }

@@ -4,7 +4,7 @@ html, body, p, ul {
 
 body {
   font: 100% Helvetica, sans-serif;
-  color: #d3a91f; }
+  color: #EDFF44; }
 
 header {
   padding: 40px 0 20px; }
@@ -17,14 +17,14 @@ ul {
     ul li a {
       text-decoration: none;
       color: #141212;
-      background: #d3a91f;
+      background: #EDFF44;
       padding: 5px 10px; }
       ul li a:hover {
         transition: background-color 2s ease;
-        background-color: red; }
+        background-color: #9100FF; }
 
 article {
-  background: #797979;
+  background: #a2a2a2;
   color: #141212;
   padding: 10px; }
 
@@ -35,3 +35,9 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px; }
+
+article:nth-child(3) blockquote {
+  background-color: green; }
+
+article:first-letter {
+  font-size: 150%; }
